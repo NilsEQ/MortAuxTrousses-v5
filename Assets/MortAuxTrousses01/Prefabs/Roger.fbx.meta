@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: 2c9bcd1889695bd49817f64e9885d2b3
+timeCreated: 1626768939
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: CHARS_Roger_Thornhill_V5:Ankle_L
+    100002: CHARS_Roger_Thornhill_V5:Ankle_R
+    100004: CHARS_Roger_Thornhill_V5:BackA_M
+    100006: CHARS_Roger_Thornhill_V5:BackB_M
+    100008: CHARS_Roger_Thornhill_V5:Chest_M
+    100010: CHARS_Roger_Thornhill_V5:Cup_L
+    100012: CHARS_Roger_Thornhill_V5:Cup_R
+    100014: CHARS_Roger_Thornhill_V5:DeformationSystem
+    100016: CHARS_Roger_Thornhill_V5:Elbow_L
+    100018: CHARS_Roger_Thornhill_V5:Elbow_R
+    100020: CHARS_Roger_Thornhill_V5:Group
+    100022: CHARS_Roger_Thornhill_V5:Hair_M
+    100024: CHARS_Roger_Thornhill_V5:Head_M
+    100026: CHARS_Roger_Thornhill_V5:Hip_L
+    100028: CHARS_Roger_Thornhill_V5:Hip_R
+    100030: CHARS_Roger_Thornhill_V5:IndexFinger1_L
+    100032: CHARS_Roger_Thornhill_V5:IndexFinger1_R
+    100034: CHARS_Roger_Thornhill_V5:IndexFinger2_L
+    100036: CHARS_Roger_Thornhill_V5:IndexFinger2_R
+    100038: CHARS_Roger_Thornhill_V5:IndexFinger3_L
+    100040: CHARS_Roger_Thornhill_V5:IndexFinger3_R
+    100042: CHARS_Roger_Thornhill_V5:Knee_L
+    100044: CHARS_Roger_Thornhill_V5:Knee_R
+    100046: CHARS_Roger_Thornhill_V5:Main
+    100048: CHARS_Roger_Thornhill_V5:Main_PH
+    100050: CHARS_Roger_Thornhill_V5:Main_SN
+    100052: CHARS_Roger_Thornhill_V5:MiddleFinger1_L
+    100054: CHARS_Roger_Thornhill_V5:MiddleFinger1_R
+    100056: CHARS_Roger_Thornhill_V5:MiddleFinger2_L
+    100058: CHARS_Roger_Thornhill_V5:MiddleFinger2_R
+    100060: CHARS_Roger_Thornhill_V5:MiddleFinger3_L
+    100062: CHARS_Roger_Thornhill_V5:MiddleFinger3_R
+    100064: CHARS_Roger_Thornhill_V5:MiddleToe1_L
+    100066: CHARS_Roger_Thornhill_V5:MiddleToe1_R
+    100068: CHARS_Roger_Thornhill_V5:Neck_M
+    100070: CHARS_Roger_Thornhill_V5:PinkyFinger1_L
+    100072: CHARS_Roger_Thornhill_V5:PinkyFinger1_R
+    100074: CHARS_Roger_Thornhill_V5:PinkyFinger2_L
+    100076: CHARS_Roger_Thornhill_V5:PinkyFinger2_R
+    100078: CHARS_Roger_Thornhill_V5:PinkyFinger3_L
+    100080: CHARS_Roger_Thornhill_V5:PinkyFinger3_R
+    100082: CHARS_Roger_Thornhill_V5:RingFinger1_L
+    100084: CHARS_Roger_Thornhill_V5:RingFinger1_R
+    100086: CHARS_Roger_Thornhill_V5:RingFinger2_L
+    100088: CHARS_Roger_Thornhill_V5:RingFinger2_R
+    100090: CHARS_Roger_Thornhill_V5:RingFinger3_L
+    100092: CHARS_Roger_Thornhill_V5:RingFinger3_R
+    100094: CHARS_Roger_Thornhill_V5:roger_thornhill
+    100096: CHARS_Roger_Thornhill_V5:Root_M
+    100098: CHARS_Roger_Thornhill_V5:Scapula_L
+    100100: CHARS_Roger_Thornhill_V5:Scapula_R
+    100102: CHARS_Roger_Thornhill_V5:Shoulder_L
+    100104: CHARS_Roger_Thornhill_V5:Shoulder_R
+    100106: CHARS_Roger_Thornhill_V5:ThumbFinger1_L
+    100108: CHARS_Roger_Thornhill_V5:ThumbFinger1_R
+    100110: CHARS_Roger_Thornhill_V5:ThumbFinger2_L
+    100112: CHARS_Roger_Thornhill_V5:ThumbFinger2_R
+    100114: CHARS_Roger_Thornhill_V5:ThumbFinger3_L
+    100116: CHARS_Roger_Thornhill_V5:ThumbFinger3_R
+    100118: CHARS_Roger_Thornhill_V5:Wrist_L
+    100120: CHARS_Roger_Thornhill_V5:Wrist_R
+    100122: //RootNode
+    400000: CHARS_Roger_Thornhill_V5:Ankle_L
+    400002: CHARS_Roger_Thornhill_V5:Ankle_R
+    400004: CHARS_Roger_Thornhill_V5:BackA_M
+    400006: CHARS_Roger_Thornhill_V5:BackB_M
+    400008: CHARS_Roger_Thornhill_V5:Chest_M
+    400010: CHARS_Roger_Thornhill_V5:Cup_L
+    400012: CHARS_Roger_Thornhill_V5:Cup_R
+    400014: CHARS_Roger_Thornhill_V5:DeformationSystem
+    400016: CHARS_Roger_Thornhill_V5:Elbow_L
+    400018: CHARS_Roger_Thornhill_V5:Elbow_R
+    400020: CHARS_Roger_Thornhill_V5:Group
+    400022: CHARS_Roger_Thornhill_V5:Hair_M
+    400024: CHARS_Roger_Thornhill_V5:Head_M
+    400026: CHARS_Roger_Thornhill_V5:Hip_L
+    400028: CHARS_Roger_Thornhill_V5:Hip_R
+    400030: CHARS_Roger_Thornhill_V5:IndexFinger1_L
+    400032: CHARS_Roger_Thornhill_V5:IndexFinger1_R
+    400034: CHARS_Roger_Thornhill_V5:IndexFinger2_L
+    400036: CHARS_Roger_Thornhill_V5:IndexFinger2_R
+    400038: CHARS_Roger_Thornhill_V5:IndexFinger3_L
+    400040: CHARS_Roger_Thornhill_V5:IndexFinger3_R
+    400042: CHARS_Roger_Thornhill_V5:Knee_L
+    400044: CHARS_Roger_Thornhill_V5:Knee_R
+    400046: CHARS_Roger_Thornhill_V5:Main
+    400048: CHARS_Roger_Thornhill_V5:Main_PH
+    400050: CHARS_Roger_Thornhill_V5:Main_SN
+    400052: CHARS_Roger_Thornhill_V5:MiddleFinger1_L
+    400054: CHARS_Roger_Thornhill_V5:MiddleFinger1_R
+    400056: CHARS_Roger_Thornhill_V5:MiddleFinger2_L
+    400058: CHARS_Roger_Thornhill_V5:MiddleFinger2_R
+    400060: CHARS_Roger_Thornhill_V5:MiddleFinger3_L
+    400062: CHARS_Roger_Thornhill_V5:MiddleFinger3_R
+    400064: CHARS_Roger_Thornhill_V5:MiddleToe1_L
+    400066: CHARS_Roger_Thornhill_V5:MiddleToe1_R
+    400068: CHARS_Roger_Thornhill_V5:Neck_M
+    400070: CHARS_Roger_Thornhill_V5:PinkyFinger1_L
+    400072: CHARS_Roger_Thornhill_V5:PinkyFinger1_R
+    400074: CHARS_Roger_Thornhill_V5:PinkyFinger2_L
+    400076: CHARS_Roger_Thornhill_V5:PinkyFinger2_R
+    400078: CHARS_Roger_Thornhill_V5:PinkyFinger3_L
+    400080: CHARS_Roger_Thornhill_V5:PinkyFinger3_R
+    400082: CHARS_Roger_Thornhill_V5:RingFinger1_L
+    400084: CHARS_Roger_Thornhill_V5:RingFinger1_R
+    400086: CHARS_Roger_Thornhill_V5:RingFinger2_L
+    400088: CHARS_Roger_Thornhill_V5:RingFinger2_R
+    400090: CHARS_Roger_Thornhill_V5:RingFinger3_L
+    400092: CHARS_Roger_Thornhill_V5:RingFinger3_R
+    400094: CHARS_Roger_Thornhill_V5:roger_thornhill
+    400096: CHARS_Roger_Thornhill_V5:Root_M
+    400098: CHARS_Roger_Thornhill_V5:Scapula_L
+    400100: CHARS_Roger_Thornhill_V5:Scapula_R
+    400102: CHARS_Roger_Thornhill_V5:Shoulder_L
+    400104: CHARS_Roger_Thornhill_V5:Shoulder_R
+    400106: CHARS_Roger_Thornhill_V5:ThumbFinger1_L
+    400108: CHARS_Roger_Thornhill_V5:ThumbFinger1_R
+    400110: CHARS_Roger_Thornhill_V5:ThumbFinger2_L
+    400112: CHARS_Roger_Thornhill_V5:ThumbFinger2_R
+    400114: CHARS_Roger_Thornhill_V5:ThumbFinger3_L
+    400116: CHARS_Roger_Thornhill_V5:ThumbFinger3_R
+    400118: CHARS_Roger_Thornhill_V5:Wrist_L
+    400120: CHARS_Roger_Thornhill_V5:Wrist_R
+    400122: //RootNode
+    2100000: CHARS_Roger_Thornhill_V5_m005_body
+    2100002: CHARS_Roger_Thornhill_V5_m005_head
+    2100004: CHARS_Roger_Thornhill_V5_m005_opacity
+    4300000: CHARS_Roger_Thornhill_V5:roger_thornhill
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: CHARS_Roger_Thornhill_V5:roger_thornhill
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: m005_body_color
+    second: {fileID: 2800000, guid: fb3c87cc9d55b2949b05f6222c658a4c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: m005_body_normal
+    second: {fileID: 2800000, guid: db3692f192fcce34da75d5fb257f5743, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: m005_head_color_V
+    second: {fileID: 2800000, guid: a9937a08e12fc884d900f9f3b1faa2cc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: m005_head_normal
+    second: {fileID: 2800000, guid: d128457a8a4680a45ae7dd0547f439ea, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: m005_opacity_color
+    second: {fileID: 2800000, guid: 040a253f9511e9943bce3a0010dd95bd, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

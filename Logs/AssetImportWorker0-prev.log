@@ -1,0 +1,88 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.5f1 (8095aa901b9b) revision 8426922'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19044.1706; Version 2009; 64bit' Language: 'fr' Physical Memory: 32523 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\2020.3.5f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Nils/Documents/MortAuxTrousses-v4
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+65340
+Successfully changed project path to: C:/Users/Nils/Documents/MortAuxTrousses-v4
+C:/Users/Nils/Documents/MortAuxTrousses-v4
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 50.45 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.5f1 (8095aa901b9b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Nils/Documents/MortAuxTrousses-v4/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2080 Super (ID=0x1ed3)
+    Vendor:   
+    VRAM:     8010 MB
+    Driver:   27.21.14.6618
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/2020.3.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56484
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/2020.3.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002715 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 40.73 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.068 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006563 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.959 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.60 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2194 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 195.3 MB.
+System memory in use after: 195.3 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2650.
+Total: 2.463500 ms (FindLiveObjects: 0.314200 ms CreateObjectMapping: 0.174500 ms MarkObjects: 1.879800 ms  DeleteObjects: 0.093000 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Camera Rig MS 1 to Camera Rig LS 1 - Before.png
+  artifactKey: Guid(c29cacb9309468b42a34f366781d7a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Camera Rig MS 1 to Camera Rig LS 1 - Before.png using Guid(c29cacb9309468b42a34f366781d7a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '180e5e34701f9edd095cd9ecc03e9633') in 0.105523 seconds
+  Import took 0.109626 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/Camera Rig WS 1 to Camera Rig FS 1 - Before.png
+  artifactKey: Guid(8a005af3c986c8745a0260b4f6ca936e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Camera Rig WS 1 to Camera Rig FS 1 - Before.png using Guid(8a005af3c986c8745a0260b4f6ca936e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68c80e77d60a1e24decd6a1ee9e02ac3') in 0.018887 seconds
+  Import took 0.024139 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

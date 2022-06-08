@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.mortauxtrousses.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\loupv\\Desktop\\REMI\\MortAuxTrousses\\Projet-Unity\\MortAuxTrousses-v3\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "MortAuxTrousses [Testing]"
+        }
+      }
+    }
+  ]
+}
