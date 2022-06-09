@@ -3,7 +3,6 @@ using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using System.Collections;
-using IronXL;
 
 
 
@@ -22,7 +21,6 @@ namespace ViveSR.anipal.Eye
         public GameObject LookedAtObject;
         private GameObject isnull;
         public float timer;
-        private float global_timer;
 
 
         private void Start()
@@ -35,22 +33,6 @@ namespace ViveSR.anipal.Eye
 
             isnull = new GameObject("Nullreference");
 
-
-            //Create new Excel WorkBook document. 
-            //The default file format is XLSX, but we can override that for legacy support
-            WorkBook xlsWorkbook = WorkBook.Create(ExcelFileFormat.XLS);
-            xlsWorkbook.Metadata.Author = "IronXL";
-
-            //Add a blank WorkSheet
-            WorkSheet xlsSheet = xlsWorkbook.CreateWorkSheet("new_sheet");
-            //Add data and styles to the new worksheet
-
-            xlsSheet["A1"].Value = "Hello World";
-            xlsSheet["A2"].Style.BottomBorder.SetColor("#ff6600");
-            xlsSheet["A2"].Style.BottomBorder.Type = IronXL.Styles.BorderType.Double;
-
-            //Save the excel file
-            xlsWorkbook.SaveAs(Application.dataPath + "/NewExcelFile.xls");
         }
 
 
@@ -64,8 +46,7 @@ namespace ViveSR.anipal.Eye
         private void Update()
         {
 
-            //Global timer must be updated every frame
-            global_timer += Time.deltaTime;
+
 
 
             if (SRanipal_Eye_Framework.Status != SRanipal_Eye_Framework.FrameworkStatus.WORKING &&
@@ -114,8 +95,12 @@ namespace ViveSR.anipal.Eye
                         timer = 0.0f;
                     }
                 }
+                
             }
         }
+
+
+
         private void Release()
         {
             if (eye_callback_registered == true)
@@ -128,6 +113,5 @@ namespace ViveSR.anipal.Eye
         {
             eyeData = eye_data;
         }
-
     }
 }

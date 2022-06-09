@@ -1,6 +1,6 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/Nils/Documents/MortAuxTrousses-v4/Packages/manifest.json
+    m_FilePath: F:/MortAuxTrousses-v4/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -8,7 +8,7 @@ m_ProjectFiles:
       ticks: 637781186338187245
     m_Hash: 1850059854
   m_LockFileStatus:
-    m_FilePath: C:/Users/Nils/Documents/MortAuxTrousses-v4/Packages/packages-lock.json
+    m_FilePath: F:/MortAuxTrousses-v4/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -25,7 +25,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.7.5
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.cinemachine@2.7.5
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.cinemachine@2.7.5
       assetPath: Packages/com.unity.cinemachine
       name: com.unity.cinemachine
       displayName: Cinemachine
@@ -191,7 +191,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.15.4
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.collab-proxy@1.15.4
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.collab-proxy@1.15.4
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Version Control
@@ -346,7 +346,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.ide.rider@2.0.7
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.ide.rider@2.0.7
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -463,7 +463,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.12
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.ide.visualstudio@2.0.12
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.ide.visualstudio@2.0.12
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -556,7 +556,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.4
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.ide.vscode@1.2.4
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.ide.vscode@1.2.4
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -629,7 +629,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.29
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.test-framework@1.1.29
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.test-framework@1.1.29
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -733,7 +733,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.6
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.textmeshpro@3.0.6
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.textmeshpro@3.0.6
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -903,7 +903,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.4.8
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.timeline@1.4.8
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.timeline@1.4.8
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -1128,12 +1128,12 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.valvesoftware.unity.openvr@file:C:\Users\Nils\Documents\MortAuxTrousses-v4\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz
+    - packageId: com.valvesoftware.unity.openvr@file:F:\MortAuxTrousses-v4\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz
       testable: 0
       isDirectDependency: 1
       version: 1.1.4
       source: 6
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.valvesoftware.unity.openvr@bc221bb6dcbc-1610414760000
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.valvesoftware.unity.openvr@be6fbec2bfcb-1610414760000
       assetPath: Packages/com.valvesoftware.unity.openvr
       name: com.valvesoftware.unity.openvr
       displayName: OpenVR XR Plugin
@@ -2960,7 +2960,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 3.2.13
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.xr.management@3.2.13
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.xr.management@3.2.13
       assetPath: Packages/com.unity.xr.management
       name: com.unity.xr.management
       displayName: XR Plugin Management
@@ -3098,7 +3098,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 2.1.7
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.7
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.7
       assetPath: Packages/com.unity.xr.legacyinputhelpers
       name: com.unity.xr.legacyinputhelpers
       displayName: XR Legacy Input Helpers
@@ -3194,7 +3194,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.ext.nunit@1.0.6
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.ext.nunit@1.0.6
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -3257,7 +3257,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 2.0.0
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0
       assetPath: Packages/com.unity.nuget.newtonsoft-json
       name: com.unity.nuget.newtonsoft-json
       displayName: Newtonsoft Json
@@ -3337,7 +3337,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.1
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.services.core@1.0.1
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.services.core@1.0.1
       assetPath: Packages/com.unity.services.core
       name: com.unity.services.core
       displayName: Services Core
@@ -3416,7 +3416,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
-      resolvedPath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Library\PackageCache\com.unity.subsystemregistration@1.0.6
+      resolvedPath: F:\MortAuxTrousses-v4\Library\PackageCache\com.unity.subsystemregistration@1.0.6
       assetPath: Packages/com.unity.subsystemregistration
       name: com.unity.subsystemregistration
       displayName: Subsystem Registration
@@ -3471,19 +3471,19 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus:
-    - m_FilePath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz/package.json
+    - m_FilePath: F:\MortAuxTrousses-v4\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz/package.json
       m_PathExists: 0
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
         serializedVersion: 2
         ticks: 0
       m_Hash: 0
-    - m_FilePath: C:\Users\Nils\Documents\MortAuxTrousses-v4\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz
+    - m_FilePath: F:\MortAuxTrousses-v4\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz
       m_PathExists: 1
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
         serializedVersion: 2
         ticks: 637460115600000000
       m_Hash: 2919789393
-m_ProjectPath: C:/Users/Nils/Documents/MortAuxTrousses-v4/Packages
+m_ProjectPath: F:/MortAuxTrousses-v4/Packages
 m_EditorVersion: 2020.3.5f1 (8095aa901b9b)
