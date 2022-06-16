@@ -13,10 +13,14 @@ public class Data_writer : MonoBehaviour
 
     private float global_timer;
     StreamWriter writer;
+    private Looking_tracker looktracker;
+    private SpeedTracker speedtracker;
 
     // Start is called before the first frame update
     void Start()
     {
+        looktracker = GameObject.Find("EyeData").GetComponent<Looking_tracker>();
+        speedtracker = GameObject.Find("Speedtracker").GetComponent<SpeedTracker>();
         writer = new StreamWriter(Application.dataPath + "/Data/" + DateTime.Now.ToString("dd-MM-yy   hh-mm-ss") + ".csv");
     }
 
@@ -32,8 +36,8 @@ public class Data_writer : MonoBehaviour
         //Global timer must be updated every frame
         global_timer += Time.deltaTime;
 
-        GameObject seen = GameObject.Find("EyeData").GetComponent<Looking_tracker>().LookedAtObject;
-        float speed = GameObject.Find("Speedtracker").GetComponent<SpeedTracker>().headAngSpeed.magnitude;
+        GameObject seen = looktracker.LookedAtObject;
+        float speed = speedtracker.headAngSpeed.magnitude;
         if (seen != null)
         {
             write_data(seen,speed);

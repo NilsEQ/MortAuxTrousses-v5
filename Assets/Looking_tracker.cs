@@ -18,7 +18,7 @@ namespace ViveSR.anipal.Eye
 
 
         public Camera mycamera;
-        public GameObject LookedAtObject;
+        public GameObject eyetracked_object;
         private GameObject isnull;
         public float timer;
 
@@ -76,14 +76,14 @@ namespace ViveSR.anipal.Eye
                 {
                     Debug.Log(FocusInfo.transform.name);
                     GameObject seen = FocusInfo.transform.gameObject;
-                    if (seen == LookedAtObject)
+                    if (seen == eyetracked_object)
                     {
                         timer += Time.deltaTime;
                     }
                     else
                     {
                         timer = 0.0f;
-                        LookedAtObject = seen;
+                        eyetracked_object = seen;
                     }
                     break;
                 }
@@ -91,7 +91,7 @@ namespace ViveSR.anipal.Eye
                 {
                     if (index == GazePriority[GazePriority.Length - 1])
                     {
-                        LookedAtObject = isnull;
+                        eyetracked_object = isnull;
                         timer = 0.0f;
                     }
                 }

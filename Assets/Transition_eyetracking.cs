@@ -17,6 +17,7 @@ namespace ViveSR.anipal.Eye
 
 
         private GameObject Transition_Handler;
+        private GameObject Looking_tracker;
         private bool done;
 
         public GameObject previousRig;
@@ -38,6 +39,8 @@ namespace ViveSR.anipal.Eye
             }
             mycamera = previousRig.GetComponentInChildren<Camera>();
             Transition_Handler = GameObject.Find("Transition_Handler");
+
+
         }
 
 
@@ -119,9 +122,9 @@ namespace ViveSR.anipal.Eye
             if (!done)
             {
                 ScreenCapture.CaptureScreenshot(Application.dataPath + "/" + previousRig.name + " to " + nextRig.name + " - Before.png");
-                Transition_Handler.GetComponent<Do_transition>().rig1 = previousRig;
-                Transition_Handler.GetComponent<Do_transition>().rig2 = nextRig;
-                Transition_Handler.GetComponent<Do_transition>().transition = true;
+                Transition_Handler.GetComponent<Rig_Handler>().currentRig = previousRig;
+                Transition_Handler.GetComponent<Rig_Handler>().nextRig = nextRig;
+                Transition_Handler.GetComponent<Rig_Handler>().transition = true;
                 done = true;
             }
 
