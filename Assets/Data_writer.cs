@@ -36,7 +36,7 @@ public class Data_writer : MonoBehaviour
         //Global timer must be updated every frame
         global_timer += Time.deltaTime;
 
-        GameObject seen = looktracker.LookedAtObject;
+        GameObject seen = looktracker.eyetracked_object;
         float speed = speedtracker.headAngSpeed.magnitude;
         if (seen != null)
         {
