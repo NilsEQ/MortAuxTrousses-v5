@@ -58,7 +58,7 @@ public class Rig_Handler : MonoBehaviour
         screenShot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
         screenShot.Apply();
         byte[] bytes = screenShot.EncodeToPNG();
-        string fileName = Application.dataPath + "/" + previousRig.name + " to " + nextRig.name + " - After.png";
+        string fileName = Application.dataPath + "/Data/pictures/" + previousRig.name + " to " + nextRig.name + " - After.png";
         System.IO.File.WriteAllBytes(fileName, bytes);
     }
 }

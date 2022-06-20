@@ -198,7 +198,7 @@ public class Transition_Conditions : MonoBehaviour
     {
         if (Rig_Handler.currentRig == previousRig)
         {
-            ScreenCapture.CaptureScreenshot(Application.dataPath + "/" + previousRig.name + " to " + nextRig.name + " - Before.png");
+            ScreenCapture.CaptureScreenshot(Application.dataPath + "/Data/pictures/" + previousRig.name + " to " + nextRig.name + " - Before.png");
             Rig_Handler.nextRig = nextRig;
             Rig_Handler.transition = true;
         }
