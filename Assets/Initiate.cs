@@ -11,6 +11,7 @@ public class Initiate : MonoBehaviour
     private GameObject Transition_Handler;
     private Rig_Handler Rig_Handler;
 
+
     // Start is called before the first frame update
 
     private void Awake()
@@ -22,6 +23,10 @@ public class Initiate : MonoBehaviour
 
         GameObject EyeData = GameObject.Find("EyeData");
         EyeData.GetComponent<Looking_tracker>().mycamera = firstRig.GetComponentInChildren<Camera>();
+        
+        GameObject FrameHandler = GameObject.Find("Frame_Handler");
+        FrameHandler.GetComponent<frustum_calc>().mycamera = firstRig.GetComponentInChildren<Camera>();
+
     }
 
     void Start()

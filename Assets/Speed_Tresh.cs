@@ -17,7 +17,7 @@ public class Speed_Tresh : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speedtracker = GameObject.Find("Speedtracker").GetComponent<SpeedTracker>();
+        speedtracker = GetComponentInParent<SpeedTracker>();
         timer = 0.0f;
 
         Transition_Handler = GameObject.Find("Transition_Handler");

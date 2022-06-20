@@ -11,6 +11,7 @@ public class Rig_Handler : MonoBehaviour
     public GameObject currentRig;
     public GameObject nextRig;
     GameObject EyeData;
+    GameObject FrameHandler;
 
     public Camera mycamera;
 
@@ -20,6 +21,7 @@ public class Rig_Handler : MonoBehaviour
     void Awake()
     {
         EyeData = GameObject.Find("EyeData");
+        FrameHandler = GameObject.Find("Frame_Handler");
         transition = false;
     }
 
@@ -47,6 +49,8 @@ public class Rig_Handler : MonoBehaviour
 
         EyeData.GetComponent<Looking_tracker>().mycamera = mycamera;
         EyeData.GetComponent<Looking_tracker>().timer = 0.0f;
+
+        FrameHandler.GetComponent<frustum_calc>().mycamera = mycamera;
 
 
         yield return new WaitForEndOfFrame();

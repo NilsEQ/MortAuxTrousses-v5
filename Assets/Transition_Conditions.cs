@@ -24,7 +24,7 @@ public class Transition_Conditions : MonoBehaviour
     //Condition : not moving
     public bool isnotmove;
     public float speed_threshold = 0.2f;
-    public float delay_notmove;
+    public float notmove_delay;
     private Speed_Tresh Speed_script;
 
     //Condition : Eye tracking
@@ -34,18 +34,21 @@ public class Transition_Conditions : MonoBehaviour
     private Looking_tracker lookingtracker;
 
 
-    public bool watch;
-    public bool frame_search;
-    public bool notframe_search;
+    //Condition : Checking if in frame
+    public bool inframe_search;
+    public GameObject tocheckinframe;
+    public float inframe_delay;
+    private InFrameTimer InFrame_Script;
 
 
-    public GameObject toWatch;
-    public float castwidth;
+    //Condition : Checking if not in frame
+    public bool notinframe_search;
+    public GameObject tochecknotinframe;
+    public float notinframe_delay;
+    private NotinFrameTimer NotinFrame_Script;
 
-    public float delay;
-    private float timer;
 
-    // Checking distance to an object
+    //Condition : Checking distance to an object
     public bool checkdistance;
     public float distance;
     public GameObject toDistance;
@@ -53,7 +56,10 @@ public class Transition_Conditions : MonoBehaviour
     private Distance_Checker DistanceChecker;
 
 
-
+    //Deprecated : raycast from head
+    //public bool watch;
+    //public float castwidth;
+    //public bool delay;
 
 
 
@@ -85,6 +91,21 @@ public class Transition_Conditions : MonoBehaviour
             Speed_script.threshold = speed_threshold;
         }
 
+        if (inframe_search)
+        {
+            GameObject Frame_Handler = GameObject.Find("Frame_Handler");
+            InFrame_Script = Frame_Handler.AddComponent<InFrameTimer>();
+            InFrame_Script.toDetect = tocheckinframe;
+        }
+
+        if (notinframe_search)
+        {
+            GameObject Frame_Handler = GameObject.Find("Frame_Handler");
+            NotinFrame_Script = Frame_Handler.AddComponent<NotinFrameTimer>();
+            NotinFrame_Script.toDetect = tochecknotinframe;
+            Debug.Log(tochecknotinframe);
+        }
+
     }
 
     private void Start()
@@ -95,7 +116,6 @@ public class Transition_Conditions : MonoBehaviour
 
     void OnEnable()
     {
-        timer = delay;
         mycamera = previousRig.GetComponentInChildren<Camera>();
     }
 
@@ -107,7 +127,7 @@ public class Transition_Conditions : MonoBehaviour
         
         if (isnotmove)
         {
-            dewit = dewit && (Speed_script.timer > delay_notmove);
+            dewit = dewit && (Speed_script.timer > notmove_delay);
         }
 
         if (eyetracking)
@@ -117,59 +137,47 @@ public class Transition_Conditions : MonoBehaviour
 
         if (checkdistance)
         {
-            dewit = dewit && (DistanceChecker.timer > delay);
+            dewit = dewit && (DistanceChecker.timer > distance_delay);
         }
 
 
-        if (watch)
+        //if (watch)
+        //{
+        //    Transform transform = previousRig.transform.GetChild(2);
+        //    Debug.DrawRay(transform.position, transform.rotation * Vector3.forward * 200, Color.red);
+        //    RaycastHit hit;
+        //    Ray ray = new Ray(transform.position, transform.rotation * Vector3.forward);
+
+        //    if (Physics.SphereCast(ray, castwidth, out hit, Mathf.Infinity))
+        //    {
+        //        if (hit.transform.gameObject == toWatch)
+        //        {
+        //            countdown();
+        //        }
+        //        else
+        //        {
+        //            timer = delay;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        timer = delay;
+        //    }
+        //}
+
+
+        if (inframe_search)
         {
-            Transform transform = previousRig.transform.GetChild(2);
-            Debug.DrawRay(transform.position, transform.rotation * Vector3.forward * 200, Color.red);
-            RaycastHit hit;
-            Ray ray = new Ray(transform.position, transform.rotation * Vector3.forward);
-
-            if (Physics.SphereCast(ray, castwidth, out hit, Mathf.Infinity))
-            {
-                if (hit.transform.gameObject == toWatch)
-                {
-                    countdown();
-                }
-                else
-                {
-                    timer = delay;
-                }
-            }
-            else
-            {
-                timer = delay;
-            }
+            dewit = dewit && (InFrame_Script.timer > inframe_delay);
         }
 
-
-        if (frame_search)
+        if (notinframe_search)
         {
-            if (ICanSee())
-            {
-                countdown();
-            }
-            else
-            {
-                timer = delay;
-            }
+            dewit = dewit && (NotinFrame_Script.timer > notinframe_delay);
         }
 
-        if (notframe_search)
-        {
-            if (!ICanSee())
-            {
-                countdown();
-            }
-            else
-            {
-                timer = delay;
-            }
-        }
-
+        Debug.Log(dewit);
+        Debug.Log(isfirsttime);
         if (dewit && !isfirsttime) doTransition();
     }
 
@@ -177,6 +185,7 @@ public class Transition_Conditions : MonoBehaviour
     {
         if (!isfirsttime)
         {
+            Debug.Log("over here");
             doTransition();
         }
         else
@@ -202,22 +211,50 @@ public class Transition_Conditions : MonoBehaviour
         return newobject;
     }
 
+    //// Deprecated : methods not in this script anymore
 
-    private void countdown()
+    //private void countdown()
+    //{
+    //    timer -= Time.deltaTime;
+    //    if (timer <= 0f)
+    //    {
+    //        doTransition();
+    //    }
+    //}
+
+    //private bool ICanSee()
+    //{
+    //    Plane[] planes = GeometryUtility.CalculateFrustumPlanes(mycamera);
+    //    return GeometryUtility.TestPlanesAABB(planes, toWatch.GetComponent<Collider>().bounds);
+    //}
+
+    public void relax_move(bool mybool)
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0f)
-        {
-            doTransition();
-        }
+        isnotmove = mybool;
     }
 
-    private bool ICanSee()
+    public void relax_eyetracking(bool mybool)
     {
-        Plane[] planes = GeometryUtility.CalculateFrustumPlanes(mycamera);
-        return GeometryUtility.TestPlanesAABB(planes, toWatch.GetComponent<Collider>().bounds);
+        eyetracking = mybool;
+
     }
 
+    public void relaxmove_inframe(bool mybool)
+    {
+
+        inframe_search = mybool;
+
+    }
+
+    public void relax_notinframe(bool mybool)
+    {
+        notinframe_search = mybool;
+    }
+
+    public void relax_distance(bool mybool)
+    {
+        checkdistance = mybool;
+    }
 }
 
 
