@@ -10,7 +10,6 @@ public class NotinFrameTimer : MonoBehaviour
     Plane[] planes;
 
     //To detect change of rig
-    private GameObject Transition_Handler;
     private Rig_Handler Rig_Handler;
     private GameObject rig;
 
@@ -20,7 +19,7 @@ public class NotinFrameTimer : MonoBehaviour
     {
         frustum_Calc = GetComponentInParent<frustum_calc>();
 
-        Transition_Handler = GameObject.Find("Transition_Handler");
+        GameObject Transition_Handler = GameObject.Find("Transition_Handler");
         Rig_Handler = Transition_Handler.GetComponent<Rig_Handler>();
         rig = Transition_Handler.GetComponent<Rig_Handler>().currentRig;
 

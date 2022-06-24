@@ -33,6 +33,11 @@ public class Transition_Conditions : MonoBehaviour
     public float eyetrack_delay;
     private Looking_tracker lookingtracker;
 
+    //Condition : Checking if object has been seen before cutting
+    public bool hasseen_condition;
+    public GameObject hasseen_object;
+    public float delay_hasseen;
+    private HasSeenObject hasseen_script;
 
     //Condition : Checking if in frame
     public bool inframe_search;
@@ -76,6 +81,13 @@ public class Transition_Conditions : MonoBehaviour
             lookingtracker = GameObject.Find("EyeData").GetComponent<Looking_tracker>();
         }
 
+        if (hasseen_condition)
+        {
+            GameObject EyeData = GameObject.Find("EyeData");
+            hasseen_script = EyeData.AddComponent<HasSeenObject>();
+            hasseen_script.to_see = hasseen_object;
+        }
+
         if (checkdistance)
         {
             GameObject Distance_Handler = GameObject.Find("Distance_Handler");
@@ -103,7 +115,6 @@ public class Transition_Conditions : MonoBehaviour
             GameObject Frame_Handler = GameObject.Find("Frame_Handler");
             NotinFrame_Script = Frame_Handler.AddComponent<NotinFrameTimer>();
             NotinFrame_Script.toDetect = tochecknotinframe;
-            Debug.Log(tochecknotinframe);
         }
 
     }
@@ -134,6 +145,12 @@ public class Transition_Conditions : MonoBehaviour
         {
             dewit = dewit && (lookingtracker.eyetracked_object == eyetracked_object && lookingtracker.timer > eyetrack_delay);
         }
+
+        if (hasseen_condition)
+        {
+            dewit = dewit && (hasseen_script.timer > delay_hasseen);
+        }
+
 
         if (checkdistance)
         {
@@ -176,8 +193,6 @@ public class Transition_Conditions : MonoBehaviour
             dewit = dewit && (NotinFrame_Script.timer > notinframe_delay);
         }
 
-        Debug.Log(dewit);
-        Debug.Log(isfirsttime);
         if (dewit && !isfirsttime) doTransition();
     }
 
@@ -185,7 +200,6 @@ public class Transition_Conditions : MonoBehaviour
     {
         if (!isfirsttime)
         {
-            Debug.Log("over here");
             doTransition();
         }
         else

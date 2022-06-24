@@ -13,6 +13,7 @@ namespace ViveSR.anipal.Eye
         private FocusInfo FocusInfo;
         private readonly float MaxDistance = 20;
         private readonly GazeIndex[] GazePriority = new GazeIndex[] { GazeIndex.COMBINE, GazeIndex.LEFT, GazeIndex.RIGHT };
+        private readonly EyeIndex[] EyePriority = new EyeIndex[] {EyeIndex.LEFT};
         private static EyeData eyeData = new EyeData();
         private bool eye_callback_registered = false;
 
@@ -21,6 +22,8 @@ namespace ViveSR.anipal.Eye
         public GameObject eyetracked_object;
         private GameObject isnull;
         public float timer;
+
+        public GameObject seen;
 
 
         private void Start()
@@ -45,9 +48,6 @@ namespace ViveSR.anipal.Eye
 
         private void Update()
         {
-
-
-
 
             if (SRanipal_Eye_Framework.Status != SRanipal_Eye_Framework.FrameworkStatus.WORKING &&
                 SRanipal_Eye_Framework.Status != SRanipal_Eye_Framework.FrameworkStatus.NOT_SUPPORT) return;
@@ -75,7 +75,8 @@ namespace ViveSR.anipal.Eye
                 if (eye_focus)
                 {
                     Debug.Log(FocusInfo.transform.name);
-                    GameObject seen = FocusInfo.transform.gameObject;
+                    seen = FocusInfo.transform.gameObject;
+                    Debug.Log(seen);
                     if (seen == eyetracked_object)
                     {
                         timer += Time.deltaTime;
@@ -94,9 +95,19 @@ namespace ViveSR.anipal.Eye
                         eyetracked_object = isnull;
                         timer = 0.0f;
                     }
-                }
-                
+                } 
             }
+
+            //foreach (EyeIndex eye in EyePriority)
+            //{
+            //    float openness;
+            //    bool ye;
+            //    if (eye_callback_registered)
+            //        ye = SRanipal_Eye.GetEyeOpenness(eye, out openness, eyeData);
+            //    else
+            //        ye = SRanipal_Eye.GetEyeOpenness(eye, out openness);
+            //    Debug.Log(ye);
+            //}
         }
 
 
@@ -109,6 +120,7 @@ namespace ViveSR.anipal.Eye
                 eye_callback_registered = false;
             }
         }
+
         private static void EyeCallback(ref EyeData eye_data)
         {
             eyeData = eye_data;
