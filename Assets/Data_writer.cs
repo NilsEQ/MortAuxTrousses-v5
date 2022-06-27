@@ -38,16 +38,19 @@ public class Data_writer : MonoBehaviour
 
         GameObject seen = looktracker.eyetracked_object;
         float speed = speedtracker.headAngSpeed.magnitude;
+        Vector3 position = speedtracker.headPosition;
+        Ray GazeRay = looktracker.GazeRay;
+        Quaternion rotation
         if (seen != null)
         {
-            write_data(seen,speed);
+            write_data(GazeRay,seen, speed);
 
         }
     }
 
 
-    private void write_data(GameObject seen, float speed)
+    private void write_data(Ray GazeRay,GameObject seen, float speed)
     {
-        writer.WriteLine(global_timer.ToString().Replace(',', '.') + "," + seen.name + "," + speed.ToString().Replace(',', '.'));
+        writer.WriteLine(global_timer.ToString().Replace(',', '.') + "," + GazeRay.origin.ToString() + "," + GazeRay.direction.ToString() + "," + seen.name + "," + speed.ToString().Replace(',', '.'));
     }
 }

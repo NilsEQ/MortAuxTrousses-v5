@@ -25,6 +25,9 @@ namespace ViveSR.anipal.Eye
 
         public GameObject seen;
 
+        public Ray GazeRay;
+
+
 
         private void Start()
         {
@@ -65,7 +68,6 @@ namespace ViveSR.anipal.Eye
 
             foreach (GazeIndex index in GazePriority)
             {
-                Ray GazeRay;
                 bool eye_focus;
                 if (eye_callback_registered)
                     eye_focus = SRanipal_Eye.Focus(index, out GazeRay, out FocusInfo, 0, MaxDistance, eyeData, mycamera);
