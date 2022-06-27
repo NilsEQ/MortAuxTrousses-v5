@@ -38,9 +38,13 @@ public class Data_writer : MonoBehaviour
 
         GameObject seen = looktracker.eyetracked_object;
         float speed = speedtracker.headAngSpeed.magnitude;
+
+
         Vector3 position = speedtracker.headPosition;
         Ray GazeRay = looktracker.GazeRay;
-        Quaternion rotation
+        Quaternion rotation = speedtracker.headRotation;
+
+
         if (seen != null)
         {
             write_data(GazeRay,seen, speed);

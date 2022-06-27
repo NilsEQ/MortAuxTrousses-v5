@@ -30,7 +30,7 @@ public class Cutting_A_la_Hitchcock : MonoBehaviour
         {
             float Eulerrotation_y = New_cameraPos.transform.rotation.eulerAngles.y - mycamera.transform.rotation.eulerAngles.y;
 
-            myrig.transform.rotation = Quaternion.Euler(myrig.transform.eulerAngles.x, myrig.transform.eulerAngles.y + Eulerrotation_y, myrig.transform.eulerAngles.z);
+            myrig.transform.RotateAround(mycamera.transform.position, Vector3.up, Eulerrotation_y);
 
             Vector3 translation = New_cameraPos.transform.position - mycamera.transform.position;
             translation.y = New_cameraPos.transform.position.y - myrig.transform.position.y;
