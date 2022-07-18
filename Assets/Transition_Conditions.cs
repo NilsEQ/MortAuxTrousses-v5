@@ -60,6 +60,11 @@ public class Transition_Conditions : MonoBehaviour
     public float distance_delay;
     private Distance_Checker DistanceChecker;
 
+    //Condition : Checking distance to an object
+    public bool checkheight;
+    public float height_threshold = 1.0f;
+    public float height_delay;
+    private Height_Checker HeightChecker;
 
     //Deprecated : raycast from head
     //public bool watch;
@@ -98,9 +103,25 @@ public class Transition_Conditions : MonoBehaviour
 
         if (isnotmove)
         {
+            bool isalreadyhere = false;
             GameObject Speedtracker = GameObject.Find("Speedtracker");
-            Speed_script = Speedtracker.AddComponent<Speed_Tresh>();
-            Speed_script.threshold = speed_threshold;
+            Speed_Tresh[] mylist = Speedtracker.GetComponentsInChildren<Speed_Tresh>();
+
+            int i = 0;
+            int length = mylist.Length;
+            while (i < length && !isalreadyhere)
+            {
+                if (mylist[i].threshold == speed_threshold) {
+                    Speed_script = mylist[i];
+                    isalreadyhere = true;
+                }
+            }
+
+            if (!isalreadyhere)
+            {
+                Speed_script = Speedtracker.AddComponent<Speed_Tresh>();
+                Speed_script.threshold = speed_threshold;
+            }
         }
 
         if (inframe_search)
@@ -115,6 +136,31 @@ public class Transition_Conditions : MonoBehaviour
             GameObject Frame_Handler = GameObject.Find("Frame_Handler");
             NotinFrame_Script = Frame_Handler.AddComponent<NotinFrameTimer>();
             NotinFrame_Script.toDetect = tochecknotinframe;
+        }
+
+        if (checkheight)
+        {
+            bool isalreadyhere = false;
+            GameObject Speedtracker = GameObject.Find("Speedtracker");
+            Height_Checker[] mylist = Speedtracker.GetComponentsInChildren<Height_Checker>();
+
+            int i = 0;
+            int length = mylist.Length;
+            while (i < length && !isalreadyhere)
+            {
+                if (mylist[i].threshold == height_threshold)
+                {
+                    HeightChecker = mylist[i];
+                    isalreadyhere = true;
+                }
+            }
+
+            if (!isalreadyhere)
+            {
+                HeightChecker = Speedtracker.AddComponent<Height_Checker>();
+                HeightChecker.threshold = height_threshold;
+            }
+
         }
 
     }
@@ -193,6 +239,11 @@ public class Transition_Conditions : MonoBehaviour
             dewit = dewit && (NotinFrame_Script.timer > notinframe_delay);
         }
 
+        if (checkheight)
+        {
+            dewit = dewit && (HeightChecker.timer > height_delay);
+        }
+
         if (dewit && !isfirsttime) doTransition();
     }
 
@@ -212,7 +263,6 @@ public class Transition_Conditions : MonoBehaviour
     {
         if (Rig_Handler.currentRig == previousRig)
         {
-            ScreenCapture.CaptureScreenshot(Application.dataPath + "/Data/pictures/" + previousRig.name + " to " + nextRig.name + " - Before.png");
             Rig_Handler.nextRig = nextRig;
             Rig_Handler.transition = true;
         }

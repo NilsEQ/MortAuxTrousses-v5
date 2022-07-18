@@ -85,7 +85,7 @@ namespace ViveSR.anipal.Eye
                     }
                     else
                     {
-                        timer = 0.0f;
+                        timer = Time.deltaTime;
                         eyetracked_object = seen;
                     }
                     break;

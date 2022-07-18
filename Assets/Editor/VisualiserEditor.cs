@@ -13,9 +13,14 @@ public class LookAtPointEditor : Editor
 
         Visualiser myVis = (Visualiser)target;
 
-        if (GUILayout.Button("Update"))
+        if (GUILayout.Button("Create Vis"))
         {
             myVis.UpdateVis();
+        }
+
+        if (GUILayout.Button("Remove Vis"))
+        {
+            myVis.RemoveVis();
         }
     }
 }

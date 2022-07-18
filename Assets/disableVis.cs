@@ -13,8 +13,6 @@ public class disableVis : MonoBehaviour
         {
             int count = transition.childCount;
 
-            Debug.Log(count);
-
             for (int i = 0; i < count; i++)
             {
                 Transform rig = transition.GetChild(i);
