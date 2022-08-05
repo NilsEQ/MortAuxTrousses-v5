@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class Deactivate : MonoBehaviour
 {
-    GameObject ginny;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        int n = transform.childCount;
+
+        int i = 0;
+
+        while (i < n)
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame

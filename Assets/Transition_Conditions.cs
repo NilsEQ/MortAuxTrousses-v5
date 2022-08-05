@@ -6,20 +6,18 @@ using ViveSR.anipal.Eye;
 public class Transition_Conditions : MonoBehaviour
 {
 
-    private GameObject Transition_Handler;
-    private Rig_Handler Rig_Handler;
+    //private GameObject Transition_Handler;
+    //private Rig_Handler Rig_Handler;
 
 
-    // Start is called before the first frame update
+    //// Start is called before the first frame update
 
-    //A parameter called in order to not do a transition when the scene begins (a weird quirk of Unity)
-    private bool isfirsttime;
+    ////A parameter called in order to not do a transition when the scene begins (a weird quirk of Unity)
+    //private bool isfirsttime;
 
-    //Our rigs
-    public GameObject previousRig;
-    public GameObject nextRig;
-
-    Camera mycamera;
+    ////Our rigs
+    //public GameObject previousRig;
+    //public GameObject nextRig;
 
     //Condition : not moving
     public bool isnotmove;
@@ -75,11 +73,6 @@ public class Transition_Conditions : MonoBehaviour
 
     private void Awake()
     {
-        isfirsttime = true;
-
-        Transition_Handler = GameObject.Find("Transition_Handler");
-        Rig_Handler = Transition_Handler.GetComponent<Rig_Handler>();
-
 
         if (eyetracking)
         {
@@ -165,19 +158,10 @@ public class Transition_Conditions : MonoBehaviour
 
     }
 
-    private void Start()
-    {
 
-    }
-
-
-    void OnEnable()
-    {
-        mycamera = previousRig.GetComponentInChildren<Camera>();
-    }
 
     // Update is called once per frame
-    void Update()
+    public bool verify()
     {
 
         bool dewit = true;
@@ -244,30 +228,9 @@ public class Transition_Conditions : MonoBehaviour
             dewit = dewit && (HeightChecker.timer > height_delay);
         }
 
-        if (dewit && !isfirsttime) doTransition();
+        return dewit;
     }
 
-    private void OnDisable()
-    {
-        if (!isfirsttime)
-        {
-            doTransition();
-        }
-        else
-        {
-            isfirsttime = false;
-        }
-    }
-
-    private void doTransition()
-    {
-        if (Rig_Handler.currentRig == previousRig)
-        {
-            Rig_Handler.nextRig = nextRig;
-            Rig_Handler.transition = true;
-        }
-
-    }
 
     private GameObject createTrackingObject(GameObject myprefab)
     {

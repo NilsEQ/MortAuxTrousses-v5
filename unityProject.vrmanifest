@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.mortauxtrousses.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "B:\\MortAuxTrousses-v5\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\yidi\\OneDrive\\桌面\\MortAuxTrousses-v5\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "MortAuxTrousses [Testing]"

@@ -12,7 +12,7 @@ public class Disable_Placements_Hitchcock : MonoBehaviour
     {
         Debug.Log("Hey");
 
-        Rigs = GameObject.Find("Placements").transform;
+        Rigs = GameObject.Find("RIGS").transform;
 
         foreach (Transform Rig in Rigs)
         {

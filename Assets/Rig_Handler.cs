@@ -17,7 +17,9 @@ public class Rig_Handler : MonoBehaviour
 
     public string path;
 
-
+    //variable for method of transition
+    public Transition_RigModifs Transition_RigModifs;
+    public Transition_Audio Transition_Audio;
 
     // Start is called before the first frame update
     void Awake()
@@ -43,27 +45,91 @@ public class Rig_Handler : MonoBehaviour
             StartCoroutine(doTransition(currentRig, nextRig));
 
             currentRig = nextRig;
-            mycamera = nextRig.GetComponentInChildren<Camera>();
+            mycamera = nextRig.GetComponentInChildren<Camera>(true);
             transition = false;
         }
     }
 
 
 
-    public IEnumerator doTransition(GameObject previousRig, GameObject CameraObject)
+    public IEnumerator doTransition(GameObject previousRig, GameObject nextRig)
     {
 
         
         previousRig.SetActive(false);
+        GameObject CameraOfpreviousRig = previousRig.transform.Find("Camera").gameObject;
+        GameObject AudioOfpreviousRig = previousRig.transform.Find("Audio").gameObject;
 
-        GameObject CameraOfRig = nextRig.transform.Find("Camera").gameObject;
+        GameObject CameraOfnextRig = nextRig.transform.Find("Camera").gameObject;
+        GameObject AudioOfnextRig = nextRig.transform.Find("Audio").gameObject;
 
-        CameraObject.SetActive(false);
+
+
+        CameraOfnextRig.SetActive(false);
+        AudioOfnextRig.SetActive(false);
         nextRig.SetActive(true);
 
+
+        //modify the next rigs placement
+        Rig_Modifs Rig_modifier = nextRig.GetComponent<Rig_Modifs>();
+        if (Transition_RigModifs.RotateAroundCenter)
+        {
+            Debug.Log("rotate");
+            Rig_modifier.rotationAroundCenter(Transition_RigModifs.angle_correction);
+        }
+        else { 
+        if (Transition_RigModifs.RotateAroundUser)
+        {
+                Rig_modifier.rotationAroundUser(Transition_RigModifs.angle_correction);
+        }
+        }
+
+        if (Transition_RigModifs.translate)
+        {
+            Debug.Log("translate");
+            Rig_modifier.translate();
+        }
+
+        Debug.Log("Here is okay");
+
+        //wait one frame before changing camera to avoid jumps in the image
         yield return 0;
+        CameraOfnextRig.SetActive(true);
+        AudioOfnextRig.SetActive(true);
         previousRig.SetActive(false);
-        CameraOfRig.SetActive(true);
+
+        //if (Transition_Audio.SameTime)
+        //{
+        //    CameraOfnextRig.SetActive(true);
+        //    AudioOfnextRig.SetActive(true);
+        //    previousRig.SetActive(false);
+        //}
+        //else
+        //{
+        //    if (Transition_Audio.AudioLast)
+        //    {
+        //        CameraOfnextRig.SetActive(true);
+        //        CameraOfpreviousRig.SetActive(false);
+
+        //        yield return new WaitForSeconds(Transition_Audio.delay);
+
+        //        AudioOfnextRig.SetActive(true);
+        //        previousRig.SetActive(false);
+
+        //    }
+        //    else
+        //    {
+        //        AudioOfnextRig.SetActive(true);
+        //        AudioOfpreviousRig.SetActive(false);
+
+        //        yield return new WaitForSeconds(Transition_Audio.delay);
+
+        //        CameraOfnextRig.SetActive(true);
+        //        previousRig.SetActive(false);
+        //    }
+        //}
+
+
 
         EyeData.GetComponent<Looking_tracker>().mycamera = mycamera;
         EyeData.GetComponent<Looking_tracker>().timer = 0.0f;
@@ -79,14 +145,5 @@ public class Rig_Handler : MonoBehaviour
         //System.IO.File.WriteAllBytes(fileName, bytes);
     }
 
-    public void doTransitionNew(GameObject previousRig, GameObject nextRig)
-    {
-        previousRig.SetActive(false);
-        
-        EyeData.GetComponent<Looking_tracker>().mycamera = mycamera;
-        EyeData.GetComponent<Looking_tracker>().timer = 0.0f;
 
-        FrameHandler.GetComponent<frustum_calc>().mycamera = mycamera;
-
-    }
 }

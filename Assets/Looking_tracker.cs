@@ -74,6 +74,7 @@ namespace ViveSR.anipal.Eye
                 else
                     eye_focus = SRanipal_Eye.Focus(index, out GazeRay, out FocusInfo, 0, MaxDistance, mycamera);
 
+
                 if (eye_focus)
                 {
                     Debug.Log(FocusInfo.transform.name);

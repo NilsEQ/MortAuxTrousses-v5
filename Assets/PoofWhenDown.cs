@@ -15,7 +15,7 @@ public class PoofWhenDown : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mycamera = GetComponentInChildren<Camera>();
+        mycamera = GetComponentInChildren<Camera>(true);
         isdone = false;
     }
 
