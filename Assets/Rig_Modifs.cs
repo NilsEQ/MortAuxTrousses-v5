@@ -11,14 +11,15 @@ public class Rig_Modifs : MonoBehaviour
 
     private Vector3 initialPos;
     private Quaternion initialRot;
-
+    private Vector3 initialScale;
 
     void Awake()
     {
         rigDepart = transform;
         speedtracker = GameObject.Find("Speedtracker").GetComponent<SpeedTracker>();
-        initialPos = transform.position;
-        initialRot = transform.rotation;
+        initialPos = transform.localPosition;
+        initialRot = transform.localRotation;
+        initialScale = transform.localScale;
     }
 
 
@@ -47,8 +48,9 @@ public class Rig_Modifs : MonoBehaviour
 
     void OnDisable()
     {
-        transform.rotation = initialRot;
-        transform.position = initialPos;
+        transform.localRotation = initialRot;
+        transform.localPosition = initialPos;
+        transform.localScale = initialScale;
     }
 
     /*

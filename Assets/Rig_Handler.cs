@@ -56,7 +56,6 @@ public class Rig_Handler : MonoBehaviour
     {
 
         
-        previousRig.SetActive(false);
         GameObject CameraOfpreviousRig = previousRig.transform.Find("Camera").gameObject;
         GameObject AudioOfpreviousRig = previousRig.transform.Find("Audio").gameObject;
 
@@ -80,54 +79,55 @@ public class Rig_Handler : MonoBehaviour
         else { 
         if (Transition_RigModifs.RotateAroundUser)
         {
-                Rig_modifier.rotationAroundUser(Transition_RigModifs.angle_correction);
+             Rig_modifier.rotationAroundUser(Transition_RigModifs.angle_correction);
         }
         }
 
         if (Transition_RigModifs.translate)
         {
-            Debug.Log("translate");
             Rig_modifier.translate();
         }
 
-        Debug.Log("Here is okay");
 
-        //wait one frame before changing camera to avoid jumps in the image
-        yield return 0;
-        CameraOfnextRig.SetActive(true);
-        AudioOfnextRig.SetActive(true);
-        previousRig.SetActive(false);
 
-        //if (Transition_Audio.SameTime)
-        //{
-        //    CameraOfnextRig.SetActive(true);
-        //    AudioOfnextRig.SetActive(true);
-        //    previousRig.SetActive(false);
-        //}
-        //else
-        //{
-        //    if (Transition_Audio.AudioLast)
-        //    {
-        //        CameraOfnextRig.SetActive(true);
-        //        CameraOfpreviousRig.SetActive(false);
 
-        //        yield return new WaitForSeconds(Transition_Audio.delay);
 
-        //        AudioOfnextRig.SetActive(true);
-        //        previousRig.SetActive(false);
+        if (!Transition_Audio.AudioLast && !Transition_Audio.AudioFirst)
+        {
+            Debug.Log("Here");
+            CameraOfnextRig.SetActive(true);
+            AudioOfnextRig.SetActive(true);
+            yield return 0;
+            previousRig.SetActive(false);
+        }
+        else
+        {
+            if (Transition_Audio.AudioLast)
+            {
+                CameraOfnextRig.SetActive(true);
+                CameraOfpreviousRig.SetActive(false);
 
-        //    }
-        //    else
-        //    {
-        //        AudioOfnextRig.SetActive(true);
-        //        AudioOfpreviousRig.SetActive(false);
+                yield return new WaitForSeconds(Transition_Audio.delay);
 
-        //        yield return new WaitForSeconds(Transition_Audio.delay);
+                AudioOfnextRig.SetActive(true);
+                AudioOfpreviousRig.SetActive(false);
+                yield return 0;
+                previousRig.SetActive(false);
 
-        //        CameraOfnextRig.SetActive(true);
-        //        previousRig.SetActive(false);
-        //    }
-        //}
+            }
+            else
+            {
+                AudioOfnextRig.SetActive(true);
+                AudioOfpreviousRig.SetActive(false);
+
+                yield return new WaitForSeconds(Transition_Audio.delay);
+
+                CameraOfnextRig.SetActive(true);
+                CameraOfpreviousRig.SetActive(false);
+                yield return 0;
+                previousRig.SetActive(false);
+            }
+        }
 
 
 

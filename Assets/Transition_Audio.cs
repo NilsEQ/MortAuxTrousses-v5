@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Transition_Audio : MonoBehaviour
 {
-    public bool SameTime = true;
+    public bool AudioFirst = false;
     public bool AudioLast = false;
 
     public float delay = 0.0f;
